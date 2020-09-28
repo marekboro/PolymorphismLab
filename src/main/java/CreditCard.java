@@ -1,4 +1,4 @@
-public class CreditCard {
+public class CreditCard implements IScan{
     private String cardNumber;
     private String expiryDate;
     private int securityNumber;

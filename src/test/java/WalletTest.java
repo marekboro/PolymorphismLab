@@ -29,36 +29,38 @@ public class WalletTest {
         assertEquals(0, wallet.getNumberOfItems());
     }
 
+
     @Test
     public void canAddCreditCardToWallet() {
-        wallet.addItem(creditCard);
+        wallet.addItem((IScan)creditCard);
+//        assertEquals(1, wallet.getNumberOfItems());
         assertEquals(1, wallet.getNumberOfItems());
     }
 
     @Test
     public void canAddDebitCardToWallet() {
-        wallet.addItem(debitCard);
+        wallet.addItem((IScan)debitCard);
         assertEquals(1, wallet.getNumberOfItems());
     }
 
     @Test
     public void canAddLoyaltyCardToWallet() {
-        wallet.addItem(loyaltyCard);
+        wallet.addItem((IScan)loyaltyCard);
         assertEquals(1, wallet.getNumberOfItems());
     }
 
     @Test
     public void canAddTicketCardToWallet() {
-        wallet.addItem(ticket);
+        wallet.addItem((IScan)ticket);
         assertEquals(1, wallet.getNumberOfItems());
     }
 
     @Test
     public void canAddEverythingToWallet() {
-        wallet.addItem(creditCard);
-        wallet.addItem(debitCard);
-        wallet.addItem(loyaltyCard);
-        wallet.addItem(ticket);
+        wallet.addItem((IScan)creditCard);
+        wallet.addItem((IScan)debitCard);
+        wallet.addItem((IScan)loyaltyCard);
+        wallet.addItem((IScan)ticket);
         assertEquals(4, wallet.getNumberOfItems());
     }
 }

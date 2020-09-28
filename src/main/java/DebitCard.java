@@ -1,4 +1,4 @@
-public class DebitCard {
+public class DebitCard implements IScan{
     private String cardNumber;
     private int sortCode;
     private int accountNumber;
